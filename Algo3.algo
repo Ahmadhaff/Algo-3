@@ -1,0 +1,29 @@
+FUNCTION DOT (v1 , v2 : ARRAY_OF INTEGER[10]) : INTEGER
+VAR
+    i , dot : INTEGER 
+BEGIN
+    i:= 0
+    dot:= 0
+     IF (v1.length <> v2.length) THEN
+        write ("Vectors With Different Size")
+        RETURN NAN
+     END_IF
+
+     FOR i FROM 0 TO v1.length STEP 1  DO
+        dot := dot + v1(i) * v2(i)
+
+        i = i+1
+     END_FOR   
+    RETURN DOT ;
+END
+
+ALGORITHM orthogonal
+VAR
+    dot : INTEGER
+BEGIN
+    IF (dot === 0) THEN
+        write (" vectors are orthogonal")
+    ELSE
+        write ("vectors are not orthogonal")
+    END_IF
+END
